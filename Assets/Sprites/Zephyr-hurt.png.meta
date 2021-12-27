@@ -1,20 +1,10 @@
 fileFormatVersion: 2
-guid: cdfde49468a67ee4f98c137ed4a8e521
+guid: c900a07dffdc26946a0aadd619daaed6
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Death_0
-    21300002: Death_1
-    21300004: Death_2
-    21300006: Death_3
-    21300008: Death_4
-    21300010: Death_5
-    21300012: Death_6
-    21300014: Death_7
-    21300016: Death_8
-    21300018: Death_9
-    21300020: Death_10
-    21300022: Death_11
-    21300024: Death_12
+    21300000: Zephyr-hurt_0
+    21300002: Zephyr-hurt_1
+    21300004: Zephyr-hurt_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -58,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +87,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Death_0
+      name: Zephyr-hurt_0
       rect:
         serializedVersion: 2
-        x: 58
-        y: 48
-        width: 48
-        height: 55
+        x: 27
+        y: 0
+        width: 10
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,19 +101,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b267ca893a61aab49b8adcbda510e55f
+      spriteID: ec8cd4127c00a064a9ea0c582f47abae
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_1
+      name: Zephyr-hurt_1
       rect:
         serializedVersion: 2
-        x: 202
-        y: 49
-        width: 55
-        height: 45
+        x: 91
+        y: 0
+        width: 10
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,19 +121,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c241b22a9a9c00247b1bb10455778f63
+      spriteID: 6427d5c7cb0a3a44083adc2bd595577f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_2
+      name: Zephyr-hurt_2
       rect:
         serializedVersion: 2
-        x: 352
-        y: 49
-        width: 57
-        height: 27
+        x: 155
+        y: 0
+        width: 10
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,27 +141,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5a5e011e337e514da6f0fa524e1bf8f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_3
-      rect:
-        serializedVersion: 2
-        x: 497
-        y: 49
-        width: 62
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d80795675a7f324688c076ef9bebf6f
+      spriteID: 81c5d1c6215e2a14380f1443d3e9e96d
       vertices: []
       indices: 
       edges: []
@@ -179,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5465cbcc65d9b8741b5734d31f3f01ef
+    spriteID: 27f1d6e9393886d4b92023a0e0d08df4
     vertices: []
     indices: 
     edges: []

@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212905904783278522}
   - component: {fileID: 61905801262496106}
   - component: {fileID: 50981597787001206}
-  - component: {fileID: 114537193626266078}
   - component: {fileID: 114764348789714742}
   - component: {fileID: 95587728126933556}
   m_Layer: 9
@@ -108,17 +107,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114537193626266078
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1858205328914040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1ce94f25e686964a953743b8098fb70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114764348789714742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,7 +115,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1858205328914040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 969916fbfe9ab9a4188685859a5b61ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 84e81a60b4f127040811db261dc74026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   groundLayer:
@@ -135,7 +123,7 @@ MonoBehaviour:
     m_Bits: 256
   movementAcceleration: 18
   maxMoveSpeed: 6
-  groundLinearDrag: 9
+  groundLinearDrag: 7
   jumpForce: 17.7
   airLinearDrag: 5
   jump_FallAcceleration: 8.8

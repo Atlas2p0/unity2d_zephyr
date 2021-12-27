@@ -8,12 +8,12 @@ public class Skeleton_Behaviour : MonoBehaviour {
 	[Header("Game Objects")]
 	public Transform rayCast;
 	public LayerMask rayCastMask;
-
-	[Header("Variables")]
-	[SerializeField] public float attackDistance;
+	
+	[Header("Behavior Variables")]
 	[SerializeField] public float rayCastLength;
 	[SerializeField] public float moveSpeed;
 	[SerializeField] public float timer; //slash cooldown
+
 	private RaycastHit2D hit;
 	
 	private GameObject target;
@@ -25,7 +25,18 @@ public class Skeleton_Behaviour : MonoBehaviour {
 	private float initTimer;
 	private bool facingRight;
 	private SpriteRenderer spriteRenderer;
+
+	[Header("Combat Variables")]
+	[SerializeField] public int attackDamage = 1;
+	[SerializeField] public float attackDistance;
+	[SerializeField] public float attackRange = 0.5f;
+	public LayerMask playerLayer;
+	public Transform hitBox;
+	[SerializeField] private float attackSpeed = 0.06f;
+	private float canAttack;
 	
+
+
 
 	void Awake()
 	{
@@ -56,6 +67,12 @@ public class Skeleton_Behaviour : MonoBehaviour {
 			RaycastDebugger(); 
 		}
 
+		
+
+		
+	}
+	void FixedUpdate()
+	{
 		if(hit.collider != null)
 		{
 			SkeletonLogic();
@@ -70,8 +87,6 @@ public class Skeleton_Behaviour : MonoBehaviour {
 			StopAttack();
 		}
 
-
-		
 	}
 	void OnTriggerEnter2D(Collider2D trig)
 	{
@@ -111,13 +126,33 @@ public class Skeleton_Behaviour : MonoBehaviour {
 
 		}
 	}
+	//Not perfect but works
 	void Attack()
 	{
 		timer = initTimer;
 		attackMode = true;
-
-		anim.SetBool("canWalk", false);
 		anim.SetBool("attack", true);
+		if(attackSpeed <= canAttack)
+		{
+			BoxCollider2D instance = hitBox.GetComponent<BoxCollider2D>();
+			Collider2D hitPlayer = Physics2D.OverlapCircle(hitBox.position, attackRange, playerLayer);
+			// Damage player
+			anim.SetBool("canWalk", false);
+
+				Debug.Log("Player hit");
+			hitPlayer.GetComponent<PlayerStats>().TakeDamage(attackDamage);
+			canAttack = 0f;
+		}
+		else
+		{
+			canAttack += Time.deltaTime;
+		}
+	}
+	void OnDrawGizmosSelected()
+	{
+		if(hitBox == null)
+			return;
+		Gizmos.DrawWireSphere(hitBox.position, attackRange);
 	}
 	void Cooldown()
 	{
@@ -155,10 +190,16 @@ public class Skeleton_Behaviour : MonoBehaviour {
 	private void Flip()
 	{
 		if(!facingRight)
+		
 			spriteRenderer.flipX = true;
-		else if(facingRight)
-			spriteRenderer.flipX = false;
 			
+		
+		else if(facingRight)
+		
+			spriteRenderer.flipX = false;
+		
+		
+		// hitBox.position.x = -1;
 		facingRight = !facingRight;
 	}
 }
