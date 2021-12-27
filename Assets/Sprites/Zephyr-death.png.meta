@@ -1,11 +1,12 @@
 fileFormatVersion: 2
-guid: 6ff7e3248635e4a4d9588212762f96d4
+guid: 36b835e8a4723aa4489406b81d3bd759
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Spikes_0
-    21300002: Spikes_1
-    21300004: Spikes_2
-    21300006: Spikes_3
+    21300000: Zephyr-death_0
+    21300002: Zephyr-death_1
+    21300004: Zephyr-death_2
+    21300006: Zephyr-death_3
+    21300008: Zephyr-death_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -49,7 +50,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 15
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -88,13 +89,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spikes_0
+      name: Zephyr-death_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 8
-        height: 13
+        width: 11
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -102,19 +103,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c10db17bffcd13d4cb9bcc61dcb8c3fe
+      spriteID: 4cc4012461086504c8241278bcd50465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes_1
+      name: Zephyr-death_1
       rect:
         serializedVersion: 2
-        x: 24
+        x: 63
         y: 0
-        width: 17
-        height: 13
+        width: 13
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,18 +123,58 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abbffa86febcfee44b6edf32428e9ee8
+      spriteID: 2eb21bac99ac23b4580db863c32f5590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes_2
+      name: Zephyr-death_2
       rect:
         serializedVersion: 2
-        x: 55
+        x: 124
         y: 0
-        width: 9
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9938595c3239d34f981d0c4a4a3ce9b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zephyr-death_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7aae43719c62514db198d69f70b0793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zephyr-death_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 80
         height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -142,27 +183,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 298101729bc9f4f46a279ad5f3576f7e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spikes_3
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 0
-        width: 9
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e93bbfb87fa75ac459c89dc884a9a811
+      spriteID: 5652d69e1e91f394b8946510cf3da274
       vertices: []
       indices: 
       edges: []
@@ -170,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b9a0cd8303b07d345a3c57d293dcfc0c
+    spriteID: 747c2255c7ea52a4aa986e3d53367a19
     vertices: []
     indices: 
     edges: []

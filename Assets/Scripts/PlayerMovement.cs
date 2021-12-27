@@ -14,23 +14,23 @@ public class PlayerMovement : MonoBehaviour {
 
 	[Header("Movement Variables")]
 
-	[SerializeField]private float movementAcceleration;
-	[SerializeField]private float maxMoveSpeed;
-	[SerializeField]private float groundLinearDrag; //Decelration
+	[SerializeField]private float movementAcceleration = 18f;
+	[SerializeField]private float maxMoveSpeed = 6f;
+	[SerializeField]private float groundLinearDrag = 7f; //Decelration
 	private float horizontalDirection;
 	private float verticalDirection;
 	private bool isFacingRight;
 	private bool changingDirection; // variable to check if the player changed direction (prevents slight slide when player changes directions)
 
 	[Header("Jump Variables")]
-	[SerializeField] private float jumpForce;
-	[SerializeField] private float airLinearDrag;
-	[SerializeField] private float jump_FallAcceleration;
-	[SerializeField] private float lowJump_FallAcceleration;
-	[SerializeField] private float hangTime; //This variable along with hangTimeCounter are used to implement the coyote jump mechanic (where a player can jump if they are slightly off the platform edge)
+	[SerializeField] private float jumpForce = 17.7f;
+	[SerializeField] private float airLinearDrag = 5f;
+	[SerializeField] private float jump_FallAcceleration = 8.8f;
+	[SerializeField] private float lowJump_FallAcceleration = 5.6f;
+	[SerializeField] private float hangTime = 0.1f; //This variable along with hangTimeCounter are used to implement the coyote jump mechanic (where a player can jump if they are slightly off the platform edge)
 
 	private float hangTimeCounter;
-	[SerializeField] private float maxJumpHeight;
+	[SerializeField] private float maxJumpHeight = 23f;
 
 	[Header("Dash Variables")]
 	[SerializeField] private float dashSpeed = 15f;
@@ -319,6 +319,10 @@ public class PlayerMovement : MonoBehaviour {
 
         isDashing = false;
     }
-
+	// public void Death()
+	// {
+	// 	anim.SetBool("isDead", true);
+	// 	rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+	// }
 	
 }
