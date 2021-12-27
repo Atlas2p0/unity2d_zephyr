@@ -1,15 +1,12 @@
 fileFormatVersion: 2
-guid: 804b75d1b24cbd441bab561aecbbb034
+guid: ac0fad03e5f78134bb0f4b6191667c53
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Dark_lvl1_0
-    21300002: Dark_lvl1_1
-    21300004: Dark_lvl1_2
-    21300006: Dark_lvl1_3
-    21300008: Dark_lvl1_4
-    21300010: Dark_lvl1_5
-    21300012: Dark_lvl1_6
-    21300014: Dark_lvl1_7
+    21300000: InvertedSpikes_0
+    21300002: InvertedSpikes_1
+    21300004: InvertedSpikes_2
+    21300006: InvertedSpikes_3
+    21300008: InvertedSpikes_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -53,7 +50,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -92,13 +89,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dark_lvl1_0
+      name: InvertedSpikes_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 192
-        height: 192
+        y: 10
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -106,19 +103,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ec4c0f235ad2e946b01afda9858ebc4
+      spriteID: 3fb1a46d54995234293598c2dc9bec8e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dark_lvl1_1
+      name: InvertedSpikes_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 192
-        width: 128
-        height: 128
+        x: 20
+        y: 10
+        width: 20
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,99 +123,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cad00b055e92c1439d2a783546f3546
+      spriteID: fca55be75d4ea7547a987fe0a6abb9db
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dark_lvl1_2
+      name: InvertedSpikes_2
       rect:
         serializedVersion: 2
-        x: 448
-        y: 128
-        width: 64
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f609b087b6a501a40b6e08903cd29d2d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dark_lvl1_3
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8115a273525a30b4b879cf0bd38cdacc
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dark_lvl1_4
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85d7e458e198f644190d21c4458521f1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dark_lvl1_5
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c7d5d041f3578444bec82ad7a336b98
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dark_lvl1_6
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 6
         y: 0
-        width: 192
-        height: 64
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,19 +143,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e83ec1d4a07af84f8d2519fcf56cf82
+      spriteID: ac0f9aa986bc5864185814a9bb3b607a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dark_lvl1_7
+      name: InvertedSpikes_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 18
         y: 0
-        width: 64
-        height: 64
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,7 +163,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a666988cb1eb674090ebbf08c46404c
+      spriteID: a13597b4d84eed345b5d3bd32292a608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InvertedSpikes_4
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e46bc6df06708243a3962ae069a5c98
       vertices: []
       indices: 
       edges: []
@@ -254,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 996cc30b56a12cf4ba083d0eb69acffa
+    spriteID: f7b27bc72d1e7734f8572f79e8c01e48
     vertices: []
     indices: 
     edges: []
