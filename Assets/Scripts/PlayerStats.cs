@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour {
 	public int maxHealth = 1;
@@ -9,9 +10,11 @@ public class PlayerStats : MonoBehaviour {
 	public Transform playerTransform;
 	[SerializeField] public GameObject levelManager;
 
+	private int healths;
+	public Image[] hearts;
 	// Use this for initialization
 	void Start () {
-
+		healths = hearts.Length;
 		currentHealth = maxHealth;
 		Debug.Log(currentHealth);
 		anim = GetComponent<Animator>();
@@ -19,7 +22,6 @@ public class PlayerStats : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 	public void TakeDamage(int damage)
 	{
@@ -28,8 +30,9 @@ public class PlayerStats : MonoBehaviour {
 		
 		//Play hurt animation
 		anim.SetTrigger("Hurt");
-
-		if(currentHealth <= 0)
+		healths -= damage;
+		Destroy(hearts[healths].gameObject);
+		if (currentHealth <= 0 && healths <= 0)
 		{
 			anim.SetBool("isDead",true);
 			StartCoroutine(Die());
