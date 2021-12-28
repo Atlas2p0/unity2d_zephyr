@@ -43,6 +43,7 @@ public class MobStats : MonoBehaviour {
 		yield return new WaitForSeconds(1.2f);
 		skeletonTransform.position = new Vector2(skeletonTransform.position.x, skeletonTransform.position.y - 0.5f);
 		anim.enabled = false;
+		Destroy(gameObject);
 		
 		
 	}

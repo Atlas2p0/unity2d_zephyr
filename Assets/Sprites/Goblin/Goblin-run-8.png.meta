@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d5f2a3ca7a6181d45a0da08ac7cc86d8
+guid: b777890cafb8f4151b029bdf18430521
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -45,12 +45,12 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -69,45 +69,24 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline:
-    - - {x: -896, y: -44}
-      - {x: -895, y: 56}
-      - {x: -830, y: 55}
-      - {x: -830, y: -43}
-    - - {x: -643, y: -45}
-      - {x: -642, y: 61}
-      - {x: -585, y: 61}
-      - {x: -585, y: -45}
-    - - {x: -396, y: -44}
-      - {x: -393, y: 63}
-      - {x: -334, y: 64}
-      - {x: -336, y: -44}
-    - - {x: -145, y: -43}
-      - {x: -144, y: 62}
-      - {x: -84, y: 61}
-      - {x: -84, y: -43}
-    - - {x: 105, y: -43}
-      - {x: 105, y: 59}
-      - {x: 166, y: 59}
-      - {x: 166, y: -43}
-    - - {x: 355, y: -47}
-      - {x: 356, y: 63}
-      - {x: 416, y: 63}
-      - {x: 418, y: -47}
-    - - {x: 607, y: -47}
-      - {x: 607, y: 58}
-      - {x: 665, y: 58}
-      - {x: 665, y: -47}
-    - - {x: 858, y: -48}
-      - {x: 858, y: 55}
-      - {x: 915, y: 55}
-      - {x: 915, y: -48}
+    outline: []
     physicsShape: []
     bones: []
-    spriteID: 6fa4aadb30f5df148a1a204dbdae493f
+    spriteID: e85a12b34c3ae40ac8a3bd85326140ed
     vertices: []
     indices: 
     edges: []
