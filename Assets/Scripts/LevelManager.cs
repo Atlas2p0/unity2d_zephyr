@@ -7,15 +7,6 @@ public class LevelManager : MonoBehaviour {
 	public GameObject player;
 	public GameObject CurrentCheckpoint;
 
-	// Use this for initialization
-	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 	public void RespawnPlayer()
 	{
 		player.GetComponent<PlayerMovement>().enabled = true;

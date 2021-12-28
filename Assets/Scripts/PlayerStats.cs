@@ -4,17 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour {
-	public int maxHealth = 1;
+	public int maxHealth = 3;
 	private int currentHealth;
 	public Animator anim;
 	public Transform playerTransform;
 	[SerializeField] public GameObject levelManager;
 
-	private int healths;
+	[Header("Hearts bar")]
+	public int numOfHearts;
 	public Image[] hearts;
+	public Sprite fullHeart;
+	public Sprite emptyHeart;
 	// Use this for initialization
 	void Start () {
-		healths = hearts.Length;
 		currentHealth = maxHealth;
 		Debug.Log(currentHealth);
 		anim = GetComponent<Animator>();
@@ -22,6 +24,30 @@ public class PlayerStats : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(currentHealth > numOfHearts)
+        {
+			currentHealth = numOfHearts;
+        }
+
+		for(int i = 0; i < hearts.Length; i++)
+        {
+			if(i < currentHealth)
+            {
+				hearts[i].sprite = fullHeart;
+            }
+            else
+            {
+				hearts[i].sprite = emptyHeart;
+            }
+			if(i < numOfHearts)
+            {
+				hearts[i].enabled = true;
+            }
+            else
+            {
+				hearts[i].enabled = false;
+            }
+        }
 	}
 	public void TakeDamage(int damage)
 	{
@@ -30,14 +56,13 @@ public class PlayerStats : MonoBehaviour {
 		
 		//Play hurt animation
 		anim.SetTrigger("Hurt");
-		healths -= damage;
-		Destroy(hearts[healths].gameObject);
-		if (currentHealth <= 0 && healths <= 0)
+		if (currentHealth <= 0)
 		{
 			anim.SetBool("isDead",true);
 			StartCoroutine(Die());
 		}
 	}
+
 	IEnumerator Die()
 	{
 		Debug.Log("Player Dead");
@@ -52,6 +77,7 @@ public class PlayerStats : MonoBehaviour {
 		playerTransform.position = new Vector2(playerTransform.position.x, playerTransform.position.y - 0.5f);
 		anim.enabled = false;
 		//renable object
+		currentHealth = maxHealth;
 		levelManager.GetComponent<LevelManager>().RespawnPlayer();
 		
 	
