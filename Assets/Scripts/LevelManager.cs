@@ -27,8 +27,10 @@ public class LevelManager : MonoBehaviour {
 		player.GetComponent<Animator>().enabled = true;
 		player.GetComponent<Animator>().SetBool("isDead", false);
 		player.GetComponent<PlayerStats>().enabled = true;
+		player.GetComponent<PlayerStats>().refillHP();
 		player.GetComponent<BoxCollider2D>().enabled = true;
 		player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
 		player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+		
 	}
 }

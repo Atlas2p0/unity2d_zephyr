@@ -28,7 +28,7 @@ public class PlayerStats : MonoBehaviour {
 	public void TakeDamage(int damage)
 	{
 		currentHealth -= damage;
-		Debug.Log(currentHealth);
+		
 		
 		//Play hurt animation
 		anim.SetTrigger("Hurt");
@@ -59,6 +59,10 @@ public class PlayerStats : MonoBehaviour {
 	
 		
 		
+	}
+	public void refillHP()
+	{
+		currentHealth = maxHealth;
 	}
 	
 }

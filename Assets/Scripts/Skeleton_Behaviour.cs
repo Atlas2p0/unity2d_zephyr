@@ -48,6 +48,7 @@ public class Skeleton_Behaviour : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		facingRight = false;
 		spriteRenderer = GetComponent<SpriteRenderer>();
+		canAttack = attackSpeed - 0.2f;
 	}
 	// Update is called once per frame
 	void Update () {
