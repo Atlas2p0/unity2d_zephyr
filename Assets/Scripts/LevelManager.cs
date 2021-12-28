@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿/*
+* @Author: Eyad205798
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +19,7 @@ public class LevelManager : MonoBehaviour {
 	void Update () {
 		
 	}
+	//Re-enable all player child scripts and objects
 	public void RespawnPlayer()
 	{
 		player.GetComponent<PlayerMovement>().enabled = true;

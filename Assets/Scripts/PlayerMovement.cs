@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+* @Author: Eyad205798
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,12 +28,12 @@ public class PlayerMovement : MonoBehaviour {
 
 	[Header("Jump Variables")]
 	[SerializeField] private float jumpForce = 17.7f;
-	[SerializeField] private float airLinearDrag = 5f;
+	[SerializeField] private float airLinearDrag = 5f; // air friction
 	[SerializeField] private float jump_FallAcceleration = 8.8f;
 	[SerializeField] private float lowJump_FallAcceleration = 5.6f;
 	[SerializeField] private float hangTime = 0.1f; //This variable along with hangTimeCounter are used to implement the coyote jump mechanic (where a player can jump if they are slightly off the platform edge)
 
-	private float hangTimeCounter;
+	private float hangTimeCounter; //This variable is used for decreasing hang time 
 	[SerializeField] private float maxJumpHeight = 23f;
 
 	[Header("Dash Variables")]
@@ -83,6 +87,9 @@ public class PlayerMovement : MonoBehaviour {
         else
 			dashBufferCounter -= Time.deltaTime;
 		if (canDash) StartCoroutine(Dash(horizontalDirection, verticalDirection));
+
+		// all movement asid from dashing is under this condition as the dash function uses coroutines
+
 		if(!isDashing)
 		{
 			moveCharacter(); //@MoveCharacter function (Defined below) gets called to help move the character
@@ -95,6 +102,8 @@ public class PlayerMovement : MonoBehaviour {
 			{
 				Flip();
 			}
+
+			//Player jump code
 
 			if(Input.GetKeyDown(KeyCode.Space) && hangTimeCounter > 0f)
 			{
@@ -109,21 +118,25 @@ public class PlayerMovement : MonoBehaviour {
 				}
 				
 			}
+
 			if(grounded && rb.velocity.x != 0)
 			{
 				applyGroundLinearDrag(); //@applyGroundLinearDrag function (Defined below)
-				hangTimeCounter = hangTime;
+				hangTimeCounter = hangTime; //reset hang time counter
 			}
 			else if(grounded)
 			{
-				hangTimeCounter = hangTime;
+				hangTimeCounter = hangTime; // reset hang time counter
 			}
+
+			//else player in air
+
 			else
 			{
 				//if character is in the air decrease hangTimeCounter and apply fall deceleration and air friction
 				applyAirDrag(); //@applyAirDrag function (Defined below)
 				fallAcceleration(); //@fallAcceleration function (Defined below)
-				hangTimeCounter -= Time.deltaTime;
+				hangTimeCounter -= Time.deltaTime; //decrease hang time counter as time passes
 			}
 			
 			CheckCollisions();
@@ -163,7 +176,7 @@ public class PlayerMovement : MonoBehaviour {
 	void FixedUpdate()
 	{
 
-		//this if-else condition sets the changing direction variable = true if was pressing right arrow and pressed left and vice versa
+		//this if-else condition sets the changing direction variable = true  right arrow was being pressed and then pressed left and vice versa
 		if(rb.velocity.x > 0f && horizontalDirection < 0f)
 		{
 			changingDirection = true;
@@ -180,8 +193,7 @@ public class PlayerMovement : MonoBehaviour {
 		
 	}
 	/*
-	* creates vector 2 variable of the raw values of the virtual x and y axis and returns the vector  
-	* Note: The get axis raw function returns the axis of the being pressed (i.e right arrow is right on the x axis and up arrow is up on the y axis and so on)
+	* creates vector 2 variable of the raw values of the virtual x and y axis and returns the vector
 	*
 	*/
 	private Vector2 GetInput()
@@ -235,7 +247,7 @@ public class PlayerMovement : MonoBehaviour {
 			anim.SetBool("isJumping", true);
 			anim.SetBool("isFalling", false);
 	}
-	//This function is used to check for collisions with player
+	//This function is used to check for ground collision with player
 	private void CheckCollisions()
 	{
 		/*
@@ -289,6 +301,8 @@ public class PlayerMovement : MonoBehaviour {
 		isFacingRight = !isFacingRight;
 		transform.Rotate(0f, 180f, 0f);
 	}
+
+	//Dash function applies dash force to the player on x and y axis based on buttons pressed as time passes until dash time is over
 	IEnumerator Dash(float x, float y)
     {
         float dashStartTime = Time.time;
@@ -319,10 +333,5 @@ public class PlayerMovement : MonoBehaviour {
 
         isDashing = false;
     }
-	// public void Death()
-	// {
-	// 	anim.SetBool("isDead", true);
-	// 	rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
-	// }
 	
 }

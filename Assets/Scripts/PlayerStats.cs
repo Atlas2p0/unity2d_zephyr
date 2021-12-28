@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+* @Author: Eyad205798
+* This script uses the same functions as MobStats.cs and full commentated code can be found @MobStats.cs
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -41,7 +45,7 @@ public class PlayerStats : MonoBehaviour {
 		
 		//Disable enemy
 		GetComponent<BoxCollider2D>().enabled = false;
-		GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+		GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
 		GetComponent<PlayerMovement>().enabled = false;
 		playerTransform = GetComponent<Transform>();
 		this.enabled = false;
@@ -49,6 +53,7 @@ public class PlayerStats : MonoBehaviour {
 		playerTransform.position = new Vector2(playerTransform.position.x, playerTransform.position.y - 0.5f);
 		anim.enabled = false;
 		//renable object
+		yield return new WaitForSeconds(1.2f);
 		levelManager.GetComponent<LevelManager>().RespawnPlayer();
 		
 	

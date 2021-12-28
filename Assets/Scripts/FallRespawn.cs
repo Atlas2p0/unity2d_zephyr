@@ -1,27 +1,21 @@
 ﻿/*
-* @Author: Eyad205798
+*@Author: Eyad205798
 */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spike : MonoBehaviour {
+public class FallRespawn : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+	// if player falls off map respawn player at last checkpoint
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if(other.tag == "Player")
 		{
 			// FindObjectOfType<PlayerMovement>().Death();
-			FindObjectOfType<PlayerStats>().TakeDamage(3);
+			FindObjectOfType<LevelManager>().RespawnPlayer();
 		}
 	}
 }

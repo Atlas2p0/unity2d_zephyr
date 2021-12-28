@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+* @Author: Eyad205798
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,29 +10,29 @@ public class Skeleton_Behaviour : MonoBehaviour {
 
 	// Use this for initialization
 	[Header("Game Objects")]
-	public Transform rayCast;
-	public LayerMask rayCastMask;
+	public Transform rayCast; //used for chasing player
+	public LayerMask rayCastMask; 
+	private GameObject target; // Player object
 	
 	[Header("Behavior Variables")]
-	[SerializeField] public float rayCastLength;
+	[SerializeField] public float rayCastLength; //Length at which enemy keeps following player
 	[SerializeField] public float moveSpeed;
 	[SerializeField] public float timer; //slash cooldown
 
 	private RaycastHit2D hit;
 	
-	private GameObject target;
 	private Animator anim;
 	private float distance; //distance between enemy and player
 	private bool attackMode;
-	private bool inRange;
+	private bool inRange; //Check if player is in chase range
 	private bool cooling;
-	private float initTimer;
-	private bool facingRight;
-	private SpriteRenderer spriteRenderer;
+	private float initTimer; //used to initialize attack timer
+	private bool facingRight; //used for flipping enemy
+	private SpriteRenderer spriteRenderer; //used for flipping enemy
 
 	[Header("Combat Variables")]
 	[SerializeField] public int attackDamage = 1;
-	[SerializeField] public float attackDistance;
+	[SerializeField] public float attackDistance; //Attack range, distance at which enemy can attack
 	[SerializeField] public float attackRange = 0.5f;
 	public LayerMask playerLayer;
 	public Transform hitBox;
@@ -48,6 +52,7 @@ public class Skeleton_Behaviour : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		//This if condition handles player detection and enemy sprite flipping if player is behind enemy
 		if(inRange)
 		{
 			Vector2 playerPosition = new Vector2(target.transform.position.x, 0f);
@@ -64,7 +69,7 @@ public class Skeleton_Behaviour : MonoBehaviour {
 					Flip();
 				
 			}
-			RaycastDebugger(); 
+			RaycastDebugger();
 		}
 
 		
@@ -96,18 +101,26 @@ public class Skeleton_Behaviour : MonoBehaviour {
 			inRange = true;
 		}
 	}
+	//This function handles player chasing, attacking and ceasing attack
 	void SkeletonLogic()
 	{
+		//Calculate distance between enemy and player
 		distance = Vector2.Distance(transform.position, target.transform.position);
+
 		if(distance > attackDistance)
 		{
+			//Move towards player if not in attack distance
 			Move();
+			//Disable attack animation
 			StopAttack();
 		}
+
+		//Attack if not cooling down and player is in attack distance
 		else if(distance <= attackDistance && cooling == false)
 		{
 			Attack();
 		}
+
 		if(cooling)
 		{
 			Cooldown();
@@ -118,6 +131,7 @@ public class Skeleton_Behaviour : MonoBehaviour {
 	{
 		anim.SetBool("canWalk", true);
 
+		//If enemy is not attacking move towards player
 		if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Skeleton_attack"))
 		{
 			Vector2 targetPosition = new Vector2(target.transform.position.x, transform.position.y);
@@ -132,28 +146,34 @@ public class Skeleton_Behaviour : MonoBehaviour {
 		timer = initTimer;
 		attackMode = true;
 		anim.SetBool("attack", true);
+
+		//This if else condition makes sure that attack is only called once since this function is being called in update
+		//If this is not being done the player gets damaged more than once since attack gets called alot in one attack
+
 		if(attackSpeed <= canAttack)
 		{
-			BoxCollider2D instance = hitBox.GetComponent<BoxCollider2D>();
+			BoxCollider2D instance = hitBox.GetComponent<BoxCollider2D>();//This is the hitbox of the attack
 			Collider2D hitPlayer = Physics2D.OverlapCircle(hitBox.position, attackRange, playerLayer);
 			// Damage player
-			anim.SetBool("canWalk", false);
-
-				Debug.Log("Player hit");
-			hitPlayer.GetComponent<PlayerStats>().TakeDamage(attackDamage);
-			canAttack = 0f;
+			anim.SetBool("canWalk", false);//disable walking animation
+			hitPlayer.GetComponent<PlayerStats>().TakeDamage(attackDamage);//call take damage
+			canAttack = 0f;//start cooldown
 		}
 		else
 		{
-			canAttack += Time.deltaTime;
+			canAttack += Time.deltaTime; //cooling down
 		}
 	}
+
+	//Drawing hitbox for attack for debugging
 	void OnDrawGizmosSelected()
 	{
 		if(hitBox == null)
 			return;
 		Gizmos.DrawWireSphere(hitBox.position, attackRange);
 	}
+
+	//Attack animation cooldown
 	void Cooldown()
 	{
 		timer -= Time.deltaTime;
@@ -169,6 +189,8 @@ public class Skeleton_Behaviour : MonoBehaviour {
 		attackMode = false;
 		anim.SetBool("attack", false);
 	}
+
+	//Drawing Raycast to debug enemy chase
 	void RaycastDebugger()
 	{
 		if(distance > attackDistance)
@@ -183,12 +205,17 @@ public class Skeleton_Behaviour : MonoBehaviour {
 		}
 	}
 	
+	
 	public void TriggerCooling()
 	{
 		cooling = true;
 	}
+
 	private void Flip()
 	{
+		
+		//flipping the sprite itself was the only way to get the enemy to flip for some reason
+
 		if(!facingRight)
 		
 			spriteRenderer.flipX = true;
