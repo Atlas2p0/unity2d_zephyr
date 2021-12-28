@@ -150,11 +150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 95587728126933556}
-  attackPoint: {fileID: 4612117287993184}
-  attackRange: 0.7
   enemyLayer:
     serializedVersion: 2
     m_Bits: 1024
+  attackPoint: {fileID: 4612117287993184}
+  attackRange: 0.7
   attackDamage: 1
   attackRate: 2
 --- !u!114 &114742993906072452
