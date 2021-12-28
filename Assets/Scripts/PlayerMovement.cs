@@ -45,6 +45,8 @@ public class PlayerMovement : MonoBehaviour {
     private bool hasDashed;
 	private bool dashedOnGround;
 	private bool canDash;
+	[SerializeField] private float dashMaxHorizontal;
+	[SerializeField] private float dashMaxVertical;
 
 	[Header("Ground Collision Vars")]
 	//[SerializeField] private float groundRayCastLength;
@@ -246,6 +248,7 @@ public class PlayerMovement : MonoBehaviour {
 			//Animation
 			anim.SetBool("isJumping", true);
 			anim.SetBool("isFalling", false);
+			anim.SetBool("isDashing", false);
 	}
 	//This function is used to check for ground collision with player
 	private void CheckCollisions()
@@ -328,6 +331,18 @@ public class PlayerMovement : MonoBehaviour {
         while (Time.time < dashStartTime + dashLength)
         {
             rb.velocity = dir.normalized * dashSpeed;
+			
+			//This if condition insures that if the player is holding down the dash key the character will not keep dashing
+			if(Mathf.Abs(rb.velocity.y) >= dashMaxVertical || Mathf.Abs(rb.velocity.x) >= dashMaxHorizontal || Input.GetKeyDown(KeyCode.Space))
+			{
+				
+				dashMaxHorizontal += rb.position.x;
+				dashMaxVertical += rb.position.y;
+				
+				StopCoroutine(Dash(0, 0));
+				rb.AddForce(Vector2.down * rb.gravityScale, ForceMode2D.Impulse);
+				fallAcceleration();
+			}
             yield return null;
         }
 

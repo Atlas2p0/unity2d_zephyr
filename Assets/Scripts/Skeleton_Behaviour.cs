@@ -157,7 +157,7 @@ public class Skeleton_Behaviour : MonoBehaviour {
 			Collider2D hitPlayer = Physics2D.OverlapCircle(hitBox.position, attackRange, playerLayer);
 			// Damage player
 			anim.SetBool("canWalk", false);//disable walking animation
-			hitPlayer.GetComponent<PlayerStats>().TakeDamage(attackDamage);//call take damage
+			FindObjectOfType<PlayerStats>().TakeDamage(attackDamage);//call take damage
 			canAttack = 0f;//start cooldown
 		}
 		else

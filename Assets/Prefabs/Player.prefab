@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1858205328914040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.56, y: 0.66, z: 0}
+  m_LocalPosition: {x: -4.59, y: 8.7, z: 0}
   m_LocalScale: {x: 1.0945561, y: 1.1103725, z: 1}
   m_Children:
   - {fileID: 4612117287993184}
@@ -153,6 +153,9 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 1024
+  patrollingEnemyLayer:
+    serializedVersion: 2
+    m_Bits: 4096
   attackPoint: {fileID: 4612117287993184}
   attackRange: 0.7
   attackDamage: 1
@@ -198,6 +201,8 @@ MonoBehaviour:
   dashSpeed: 15
   dashLength: 0.3
   dashBufferLength: 0.1
+  dashMaxHorizontal: 30
+  dashMaxVertical: 30
 --- !u!212 &212905904783278522
 SpriteRenderer:
   m_ObjectHideFlags: 1

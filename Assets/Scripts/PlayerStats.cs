@@ -54,7 +54,7 @@ public class PlayerStats : MonoBehaviour {
 		anim.enabled = false;
 		//renable object
 		yield return new WaitForSeconds(1.2f);
-		levelManager.GetComponent<LevelManager>().RespawnPlayer();
+		FindObjectOfType<LevelManager>().RespawnPlayer();
 		
 	
 		
