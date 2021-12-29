@@ -47,12 +47,11 @@ public class patrollingEnemyStats : MonoBehaviour {
 		
 		enemyTransform = GetComponent<Transform>();
 		this.enabled = false;
-		
 		//Wait for animation to finish
 		yield return new WaitForSeconds(0.9f);
 
 		//position trasformed by -0.5 on y axis so that enemy is directly on the ground after death
-		enemyTransform.position = new Vector2(enemyTransform.position.x, enemyTransform.position.y - 0.91f);
+		enemyTransform.position = new Vector2(enemyTransform.position.x, enemyTransform.position.y - 0.85f);
 		anim.enabled = false;
 	}
 }
