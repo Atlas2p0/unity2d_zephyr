@@ -1,10 +1,12 @@
 fileFormatVersion: 2
-guid: f435ecbc72b73d940b69bb272fd22877
+guid: 9ed8ba82b560f1c4f82955072bb4bc3d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: bones_small-Sheet_0
-    21300002: bones_small-Sheet_1
-    21300004: bones_small-Sheet_2
+    21300000: InvertedSpikesSheet_0
+    21300002: InvertedSpikesSheet_1
+    21300004: InvertedSpikesSheet_2
+    21300006: InvertedSpikesSheet_3
+    21300008: InvertedSpikesSheet_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -48,7 +50,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,12 +89,52 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bones_small-Sheet_0
+      name: InvertedSpikesSheet_0
       rect:
         serializedVersion: 2
         x: 0
+        y: 10
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8b4625f6ffb2645a38e7d18e3ad1b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InvertedSpikesSheet_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 10
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4e9fb45d92f214aa9393575e0e22e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InvertedSpikesSheet_2
+      rect:
+        serializedVersion: 2
+        x: 7
         y: 0
-        width: 16
+        width: 8
         height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -101,39 +143,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e698846119c0eb641bf14e8b734a7abd
+      spriteID: c59385d6b9665b74b8f1f536b825a9ca
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bones_small-Sheet_1
+      name: InvertedSpikesSheet_3
       rect:
         serializedVersion: 2
-        x: 21
-        y: 0
-        width: 6
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4343614c5a1309446af84797648a862b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bones_small-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 37
+        x: 19
         y: 0
         width: 8
-        height: 11
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,7 +163,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60961be8c4fdbb24ab2c2f267c2dc32e
+      spriteID: 70661b58af272094b963df4ec25df78f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InvertedSpikesSheet_4
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9d21b99e4c7ae4e85d5872d8bc93de
       vertices: []
       indices: 
       edges: []
@@ -149,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: aeca6818323b6f6419eead1789e12675
+    spriteID: 8e733dcd370540c44a9d87f421133684
     vertices: []
     indices: 
     edges: []

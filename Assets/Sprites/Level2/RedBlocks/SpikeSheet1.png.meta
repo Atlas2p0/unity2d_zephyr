@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: f435ecbc72b73d940b69bb272fd22877
+guid: 6cf23b7897e16d046841ef029ad0a55c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: bones_small-Sheet_0
-    21300002: bones_small-Sheet_1
-    21300004: bones_small-Sheet_2
+    21300000: SpikeSheet1_0
+    21300002: SpikeSheet1_1
+    21300004: SpikeSheet1_2
+    21300006: SpikeSheet1_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -48,9 +49,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -87,13 +88,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bones_small-Sheet_0
+      name: SpikeSheet1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 8
+        width: 8
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,18 +102,38 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e698846119c0eb641bf14e8b734a7abd
+      spriteID: d12f4da3e349a3e4f99b05f2a2e84a02
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bones_small-Sheet_1
+      name: SpikeSheet1_1
       rect:
         serializedVersion: 2
-        x: 21
+        x: 28
         y: 0
-        width: 6
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d5065e3df958543843fa7ffda0252f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikeSheet1_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 9
         height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -121,19 +142,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4343614c5a1309446af84797648a862b
+      spriteID: 5b44429667a7bae49a5d8636fcad321b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bones_small-Sheet_2
+      name: SpikeSheet1_3
       rect:
         serializedVersion: 2
-        x: 37
+        x: 60
         y: 0
-        width: 8
-        height: 11
+        width: 16
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,7 +162,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60961be8c4fdbb24ab2c2f267c2dc32e
+      spriteID: c8f849859a7bc354ca31ad418f11fbe8
       vertices: []
       indices: 
       edges: []
@@ -149,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: aeca6818323b6f6419eead1789e12675
+    spriteID: 823b0900c462bd94bb9cf71f470c1168
     vertices: []
     indices: 
     edges: []

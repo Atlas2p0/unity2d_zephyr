@@ -53,3 +53,6 @@ TagManager:
   - name: Foreground
     uniqueID: 913535575
     locked: 0
+  - name: decor
+    uniqueID: 1246759561
+    locked: 0
