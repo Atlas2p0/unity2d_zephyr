@@ -1928,6 +1928,40 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114882277540539464, guid: 955681f258b9d0745aafef1a40c87ada,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1772799050}
+    - target: {fileID: 114882277540539464, guid: 955681f258b9d0745aafef1a40c87ada,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 114260685956904372, guid: 955681f258b9d0745aafef1a40c87ada,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1772799050}
+    - target: {fileID: 114260685956904372, guid: 955681f258b9d0745aafef1a40c87ada,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Retry
+      objectReference: {fileID: 0}
+    - target: {fileID: 114409341182541118, guid: 955681f258b9d0745aafef1a40c87ada,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1772799050}
+    - target: {fileID: 114409341182541118, guid: 955681f258b9d0745aafef1a40c87ada,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093184907855396, guid: 955681f258b9d0745aafef1a40c87ada, type: 2}
+      propertyPath: m_Name
+      value: textScore
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 955681f258b9d0745aafef1a40c87ada, type: 2}
   m_IsPrefabAsset: 0
@@ -2595,6 +2629,21 @@ Prefab:
       propertyPath: levelManager
       value: 
       objectReference: {fileID: 742837422}
+    - target: {fileID: 114742993906072452, guid: 7a1e5c0b535fb254a80b62c496e3ea7e,
+        type: 2}
+      propertyPath: hearts.Array.data[3]
+      value: 
+      objectReference: {fileID: 881565160}
+    - target: {fileID: 114742993906072452, guid: 7a1e5c0b535fb254a80b62c496e3ea7e,
+        type: 2}
+      propertyPath: hearts.Array.data[4]
+      value: 
+      objectReference: {fileID: 1923271852}
+    - target: {fileID: 114742993906072452, guid: 7a1e5c0b535fb254a80b62c496e3ea7e,
+        type: 2}
+      propertyPath: hearts.Array.data[5]
+      value: 
+      objectReference: {fileID: 1004777041}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a1e5c0b535fb254a80b62c496e3ea7e, type: 2}
   m_IsPrefabAsset: 0
@@ -5308,6 +5357,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1772799050 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114128233862117274, guid: 955681f258b9d0745aafef1a40c87ada,
+    type: 2}
+  m_PrefabInternal: {fileID: 631993062}
+  m_Script: {fileID: 11500000, guid: 7b429e63304cf46d2af6af3bfe5c387d, type: 3}
 --- !u!1 &1792119080
 GameObject:
   m_ObjectHideFlags: 0
