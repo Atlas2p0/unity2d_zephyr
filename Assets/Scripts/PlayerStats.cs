@@ -14,6 +14,8 @@ public class PlayerStats : MonoBehaviour {
 	public Transform playerTransform;
 	[SerializeField] public GameObject levelManager;
 	
+	[SerializeField] private AudioSource DeathSoundEffect; 
+ 
 	[Header("UI Components")]
 	private int currentHealth;
 	public int numOfHearts;
@@ -72,6 +74,7 @@ public class PlayerStats : MonoBehaviour {
 	}
 	IEnumerator Die()
 	{
+		DeathSoundEffect.Play();
 		//Display hearts all empty this has to be done here as it isn't possible in update
 		//since the function Die is a coroutine
 		hearts[0].sprite = emptyHeart;
@@ -89,6 +92,7 @@ public class PlayerStats : MonoBehaviour {
 		//renable object
 		yield return new WaitForSeconds(1.2f);
 		FindObjectOfType<LevelManager>().RespawnPlayer();
+		
 	}
 	public void refillHP()
 	{

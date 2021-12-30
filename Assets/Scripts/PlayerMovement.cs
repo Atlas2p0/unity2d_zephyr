@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour {
 	private float verticalDirection;
 	private bool isFacingRight;
 	private bool changingDirection; // variable to check if the player changed direction (prevents slight slide when player changes directions)
+	
 
 	[Header("Jump Variables")]
 	[SerializeField] private float jumpForce = 17.7f;
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour {
 	[SerializeField] private float jump_FallAcceleration = 8.8f;
 	[SerializeField] private float lowJump_FallAcceleration = 5.6f;
 	[SerializeField] private float hangTime = 0.1f; //This variable along with hangTimeCounter are used to implement the coyote jump mechanic (where a player can jump if they are slightly off the platform edge)
-
+	[SerializeField] private AudioSource JumpSoundEffect ;
 	private float hangTimeCounter; //This variable is used for decreasing hang time 
 	[SerializeField] private float maxJumpHeight = 23f;
 
@@ -47,6 +48,7 @@ public class PlayerMovement : MonoBehaviour {
 	private bool canDash;
 	[SerializeField] private float dashMaxHorizontal;
 	[SerializeField] private float dashMaxVertical;
+	[SerializeField] private AudioSource DashSoundEffect ;
 
 	[Header("Ground Collision Vars")]
 	//[SerializeField] private float groundRayCastLength;
@@ -89,6 +91,7 @@ public class PlayerMovement : MonoBehaviour {
         else
 			dashBufferCounter -= Time.deltaTime;
 		if (canDash) StartCoroutine(Dash(horizontalDirection, verticalDirection));
+		
 
 		// all movement asid from dashing is under this condition as the dash function uses coroutines
 
@@ -249,6 +252,7 @@ public class PlayerMovement : MonoBehaviour {
 			anim.SetBool("isJumping", true);
 			anim.SetBool("isFalling", false);
 			anim.SetBool("isDashing", false);
+			JumpSoundEffect.Play();
 	}
 	//This function is used to check for ground collision with player
 	private void CheckCollisions()
@@ -308,6 +312,7 @@ public class PlayerMovement : MonoBehaviour {
 	//Dash function applies dash force to the player on x and y axis based on buttons pressed as time passes until dash time is over
 	IEnumerator Dash(float x, float y)
     {
+		DashSoundEffect.Play();
         float dashStartTime = Time.time;
         hasDashed = true;
         isDashing = true;

@@ -38,6 +38,8 @@ public class Skeleton_Behaviour : MonoBehaviour {
 	public Transform hitBox;
 	[SerializeField] private float attackSpeed = 0.06f;
 	private float canAttack;
+
+	[SerializeField] private AudioSource AttackSoundEffect;
 	
 
 
@@ -145,6 +147,8 @@ public class Skeleton_Behaviour : MonoBehaviour {
 	void Attack()
 	{
 		timer = initTimer;
+		AttackSoundEffect.Play();
+
 
 		//This if else condition makes sure that attack is only called once since this function is being called in update
 		//If this is not being done the player gets damaged more than once since attack gets called alot in one attack

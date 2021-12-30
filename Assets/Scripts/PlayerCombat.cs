@@ -17,6 +17,8 @@ public class PlayerCombat : MonoBehaviour {
 	[Header("Combat Vars")]
 	public Transform attackPoint; //Position of the attack object attached to the player
 
+	[SerializeField] private AudioSource AttackSoundEffect;
+
 	public float attackRange = 0.5f; //Attack area of effect
 
 	public int attackDamage = 1; //Damage dealt
@@ -46,6 +48,7 @@ public class PlayerCombat : MonoBehaviour {
 	{
 		//Play attack animation
 		anim.SetTrigger("Attack");
+		AttackSoundEffect.Play();
 
 		//Detect enemies in range of attack
 		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer); //use position of attack and attack range and detect if enemy has been hit
