@@ -4103,6 +4103,11 @@ Prefab:
       propertyPath: ReviveSound
       value: 
       objectReference: {fileID: 58836853}
+    - target: {fileID: 82173044401759270, guid: 0e8370d8132db9d438c9fd7b499fe456,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e8370d8132db9d438c9fd7b499fe456, type: 2}
   m_IsPrefabAsset: 0

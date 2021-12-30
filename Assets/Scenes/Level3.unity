@@ -6664,6 +6664,11 @@ Prefab:
       propertyPath: textScore
       value: 
       objectReference: {fileID: 2111755642}
+    - target: {fileID: 82322972213602344, guid: 7a1e5c0b535fb254a80b62c496e3ea7e,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.302
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a1e5c0b535fb254a80b62c496e3ea7e, type: 2}
   m_IsPrefabAsset: 0
@@ -8153,7 +8158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 19.439972, y: -19.030014}
+  m_AnchoredPosition: {x: 19.439941, y: -19.030014}
   m_SizeDelta: {x: 29.48999, y: 26.919998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1793563313
@@ -9363,7 +9368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 15.649994, y: -62.580017}
+  m_AnchoredPosition: {x: 15.650024, y: -62.580017}
   m_SizeDelta: {x: 21.899994, y: 32.630005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2120671651

@@ -1266,6 +1266,11 @@ Prefab:
       propertyPath: CurrentCheckpoint
       value: 
       objectReference: {fileID: 1721150777}
+    - target: {fileID: 82173044401759270, guid: 0e8370d8132db9d438c9fd7b499fe456,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.324
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e8370d8132db9d438c9fd7b499fe456, type: 2}
   m_IsPrefabAsset: 0
@@ -4597,6 +4602,11 @@ Prefab:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 2133998430}
+    - target: {fileID: 82322972213602344, guid: 7a1e5c0b535fb254a80b62c496e3ea7e,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.194
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a1e5c0b535fb254a80b62c496e3ea7e, type: 2}
   m_IsPrefabAsset: 0
