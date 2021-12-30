@@ -125,7 +125,7 @@ public class FinalBossBehavior : MonoBehaviour {
 			// Damage player
 			anim.SetBool("canWalk", false);//disable walking animation
 			Debug.Log("hit");
-			// FindObjectOfType<PlayerStats>().TakeDamage(attackDamage);//call take damage
+			FindObjectOfType<PlayerStats>().TakeDamage(attackDamage);//call take damage
 			canAttack1 = 0f;//start cooldown
 		}
 		else
