@@ -13,6 +13,8 @@ public class Skeleton_Behaviour : MonoBehaviour {
 	public Transform rayCast; //used for chasing player
 	public LayerMask rayCastMask; 
 	private GameObject target; // Player object
+	[SerializeField] public GameObject skeletonSword;
+	// public Transform skeletonTransform;
 	
 	[Header("Behavior Variables")]
 	[SerializeField] public float rayCastLength; //Length at which enemy keeps following player
@@ -161,7 +163,8 @@ public class Skeleton_Behaviour : MonoBehaviour {
 			Collider2D hitPlayer = Physics2D.OverlapCircle(hitBox.position, attackRange, playerLayer);
 			// Damage player
 			anim.SetBool("canWalk", false);//disable walking animation
-			FindObjectOfType<PlayerStats>().TakeDamage(attackDamage);//call take damage
+			if(hitPlayer != null)
+				FindObjectOfType<PlayerStats>().TakeDamage(attackDamage);//call take damage
 			canAttack = 0f;//start cooldown
 		}
 		else
@@ -222,15 +225,13 @@ public class Skeleton_Behaviour : MonoBehaviour {
 		//flipping the sprite itself was the only way to get the enemy to flip for some reason
 
 		if(!facingRight)
-		
-			spriteRenderer.flipX = true;
-			
-		
+		{
+			spriteRenderer.flipX = true;	
+		}
 		else if(facingRight)
-		
+		{
 			spriteRenderer.flipX = false;
-		
-		
+		}
 		// hitBox.position.x = -1;
 		facingRight = !facingRight;
 	}

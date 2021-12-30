@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour {
 	[SerializeField] public Animator anim;
 	public GameObject player;
 	public GameObject CurrentCheckpoint;
+	[SerializeField] private AudioSource ReviveSound;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,7 @@ public class LevelManager : MonoBehaviour {
 	//Re-enable all player child scripts and objects
 	public void RespawnPlayer()
 	{
+		ReviveSound.Play();
 		player.GetComponent<PlayerMovement>().enabled = true;
 		FindObjectOfType<PlayerMovement>().transform.position = CurrentCheckpoint.transform.position;
 		player.GetComponent<Animator>().enabled = true;
