@@ -12,6 +12,7 @@ public class PlayerCombat : MonoBehaviour {
 	public Animator anim;
 	public LayerMask enemyLayer; //To check if player slash hit enemy
 	public LayerMask patrollingEnemyLayer; //To check if player slash hit patrolling enemy
+	public LayerMask finalBossLayer; //To check if player slash hit patrolling enemy
 
 	[Header("Combat Vars")]
 	public Transform attackPoint; //Position of the attack object attached to the player
@@ -63,9 +64,11 @@ public class PlayerCombat : MonoBehaviour {
 			Debug.Log("here");
 			patrollingEnemyStats patrollingEnemy = FindObjectOfType<patrollingEnemyStats>();
 			patrollingEnemy.enemyTakeDamage(attackDamage);
-			
 		}
-	}
+		Collider2D hitFinalBoss = Physics2D.OverlapCircle(attackPoint.position, attackRange, finalBossLayer);
+		if(hitFinalBoss != null)
+			FindObjectOfType<FinalBossStats>().TakeDamage(1);
+	}	
 	//Draw attack range for debugging
 	void OnDrawGizmosSelected()
 	{

@@ -17,20 +17,20 @@ public class Skeleton_Behaviour : MonoBehaviour {
 	[Header("Behavior Variables")]
 	[SerializeField] public float rayCastLength; //Length at which enemy keeps following player
 	[SerializeField] public float moveSpeed;
-	[SerializeField] public float timer; //slash cooldown
 
 	private RaycastHit2D hit;
 	
 	private Animator anim;
+	private bool facingRight; //used for flipping enemy
+	private SpriteRenderer spriteRenderer; //used for flipping enemy
+
+	[Header("Combat Variables")]
+	[SerializeField] public float timer; //slash cooldown
 	private float distance; //distance between enemy and player
 	private bool attackMode;
 	private bool inRange; //Check if player is in chase range
 	private bool cooling;
 	private float initTimer; //used to initialize attack timer
-	private bool facingRight; //used for flipping enemy
-	private SpriteRenderer spriteRenderer; //used for flipping enemy
-
-	[Header("Combat Variables")]
 	[SerializeField] public int attackDamage = 1;
 	[SerializeField] public float attackDistance; //Attack range, distance at which enemy can attack
 	[SerializeField] public float attackRange = 0.5f;
@@ -145,15 +145,15 @@ public class Skeleton_Behaviour : MonoBehaviour {
 	void Attack()
 	{
 		timer = initTimer;
-		attackMode = true;
-		anim.SetBool("attack", true);
 
 		//This if else condition makes sure that attack is only called once since this function is being called in update
 		//If this is not being done the player gets damaged more than once since attack gets called alot in one attack
 
 		if(attackSpeed <= canAttack)
 		{
-			BoxCollider2D instance = hitBox.GetComponent<BoxCollider2D>();//This is the hitbox of the attack
+			attackMode = true;
+			anim.SetBool("attack", true);
+			// BoxCollider2D instance = hitBox.GetComponent<BoxCollider2D>();//This is the hitbox of the attack
 			Collider2D hitPlayer = Physics2D.OverlapCircle(hitBox.position, attackRange, playerLayer);
 			// Damage player
 			anim.SetBool("canWalk", false);//disable walking animation

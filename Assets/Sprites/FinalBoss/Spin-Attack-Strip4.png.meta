@@ -1,45 +1,14 @@
 fileFormatVersion: 2
-guid: e0e920457ef43924ea641e34f8cfa0f4
+guid: 51c551118d2ee0645bdf2d96d8e49970
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Attack1_0
-    21300002: Attack1_1
-    21300004: Attack1_2
-    21300006: Attack1_3
-    21300008: Attack1_4
-    21300010: Attack1_5
-    21300012: Attack1_6
-    21300014: Attack1_7
-    21300016: Attack1_8
-    21300018: Attack1_9
-    21300020: Attack1_10
-    21300022: Attack1_11
-    21300024: Attack1_12
-    21300026: Attack1_13
-    21300028: Attack1_14
-    21300030: Attack1_15
-    21300032: Attack1_16
-    21300034: Attack1_17
-    21300036: Attack1_18
-    21300038: Attack1_19
-    21300040: Attack1_20
-    21300042: Attack1_21
-    21300044: Attack1_22
-    21300046: Attack1_23
-    21300048: Attack1_24
-    21300050: Attack1_25
-    21300052: Attack1_26
-    21300054: Attack1_27
-    21300056: Attack1_28
-    21300058: Attack1_29
-    21300060: Attack1_30
-    21300062: Attack1_31
-    21300064: Attack1_32
-    21300066: Attack1_33
-    21300068: Attack1_34
-    21300070: Attack1_35
-    21300072: Attack1_36
-    21300074: Attack1_37
+    21300000: Spin-Attack-Strip4_0
+    21300002: Spin-Attack-Strip4_1
+    21300004: Spin-Attack-Strip4_2
+    21300006: Spin-Attack-Strip4_3
+    21300008: Spin-Attack-Strip4_4
+    21300010: Spin-Attack-Strip4_5
+    21300012: Spin-Attack-Strip4_6
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -83,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 27
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,33 +91,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack1_17
+      name: Spin-Attack-Strip4_0
       rect:
         serializedVersion: 2
-        x: 1730
-        y: 164
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f195e03f27b79f84c81b78289d7e38de
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack1_0
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 60
-        width: 87
-        height: 103
+        x: 0
+        y: 0
+        width: 29
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,19 +105,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b3dc926b6f608541839fff256ff6fd9
+      spriteID: d6ca5c1dedf405d4aae76e0e307531b0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack1_1
+      name: Spin-Attack-Strip4_1
       rect:
         serializedVersion: 2
-        x: 311
-        y: 63
-        width: 96
-        height: 107
+        x: 162
+        y: 0
+        width: 55
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,19 +125,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d0d036e14c015241a8232c873e8db06
+      spriteID: 1c1282002c5a6114b8be8450aff4f745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack1_2
+      name: Spin-Attack-Strip4_2
       rect:
         serializedVersion: 2
-        x: 554
-        y: 64
-        width: 115
-        height: 125
+        x: 338
+        y: 0
+        width: 51
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,19 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de18b395299931542b19b810ed4c794b
+      spriteID: 9b4243adf9c3dd940b1c75d7644074c2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack1_3
+      name: Spin-Attack-Strip4_3
       rect:
         serializedVersion: 2
-        x: 836
-        y: 58
-        width: 165
-        height: 131
+        x: 512
+        y: 0
+        width: 49
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,19 +165,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d56c580f7459614c8f7955144365132
+      spriteID: 09f22c4eb52dd544e94eb59e3edf3913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack1_4
+      name: Spin-Attack-Strip4_4
       rect:
         serializedVersion: 2
-        x: 1090
-        y: 63
-        width: 173
-        height: 136
+        x: 683
+        y: 0
+        width: 35
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,19 +185,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 345d85fba6532634194765d7ebaedd6e
+      spriteID: e119f277ca1fc7e4f872a711151c711e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack1_5
+      name: Spin-Attack-Strip4_5
       rect:
         serializedVersion: 2
-        x: 1331
-        y: 64
-        width: 199
-        height: 157
+        x: 854
+        y: 0
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,19 +205,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b79a3107652dcc14fbf6f3f139d446d5
+      spriteID: ea50e689d155c8d4db516cfd35076a86
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack1_6
+      name: Spin-Attack-Strip4_6
       rect:
         serializedVersion: 2
-        x: 1603
-        y: 72
-        width: 155
-        height: 153
+        x: 1024
+        y: 0
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,27 +225,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08a1d4417d988ae4b9a1382987643ed9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack1_7
-      rect:
-        serializedVersion: 2
-        x: 1845
-        y: 47
-        width: 107
-        height: 145
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: afdab2d0b1e22cc49b4de96de113ac18
+      spriteID: bde2ca90aba814846b06f5d6fd8a7e0f
       vertices: []
       indices: 
       edges: []
@@ -304,7 +233,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ece1b226086c2e445aaccabad01a9ca5
+    spriteID: 7996727f29dbe9842aeb82bbb2a645ff
     vertices: []
     indices: 
     edges: []
