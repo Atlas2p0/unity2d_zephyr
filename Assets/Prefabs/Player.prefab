@@ -59,7 +59,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1858205328914040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.56, y: 0.66, z: 0}
+  m_LocalPosition: {x: -10.9, y: -3.66, z: 0}
   m_LocalScale: {x: 1.0945561, y: 1.1103725, z: 1}
   m_Children:
   - {fileID: 4612117287993184}
@@ -540,9 +540,12 @@ MonoBehaviour:
   patrollingEnemyLayer:
     serializedVersion: 2
     m_Bits: 4096
+  Lvl2Boss:
+    serializedVersion: 2
+    m_Bits: 8192
   finalBossLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16384
   attackPoint: {fileID: 4612117287993184}
   AttackSoundEffect: {fileID: 82987650157850088}
   attackRange: 0.7
@@ -561,7 +564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   anim: {fileID: 95587728126933556}
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 4499440818827526}
   levelManager: {fileID: 0}
   DeathSoundEffect: {fileID: 82322972213602344}
   numOfHearts: 3

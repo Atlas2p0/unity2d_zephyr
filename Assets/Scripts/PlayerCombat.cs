@@ -71,13 +71,13 @@ public class PlayerCombat : MonoBehaviour {
 
 		}
 
-		Collider2D[] hitBoss = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, Lvl2Boss);
-		foreach (Collider2D enem in hitBoss)
+		Collider2D hitBoss = Physics2D.OverlapCircle(attackPoint.position, attackRange, Lvl2Boss);
+		if(hitBoss != null)
 		{
 			BODHealth bossEnem = FindObjectOfType<BODHealth>();
 			bossEnem.TakeDamage(1);
-
 		}
+		
 		Collider2D hitFinalBoss = Physics2D.OverlapCircle(attackPoint.position, attackRange, finalBossLayer);
 		if(hitFinalBoss != null)
 			FindObjectOfType<FinalBossStats>().TakeDamage(1);

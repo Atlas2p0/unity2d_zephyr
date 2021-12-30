@@ -49,6 +49,7 @@ public class patrollingEnemyStats : MonoBehaviour {
 		this.enabled = false;
 		//Wait for animation to finish
 		yield return new WaitForSeconds(0.9f);
+		Destroy(this.gameObject);
 
 		//position trasformed by -0.5 on y axis so that enemy is directly on the ground after death
 		enemyTransform.position = new Vector2(enemyTransform.position.x, enemyTransform.position.y - 0.85f);

@@ -25,9 +25,9 @@ public class LevelManager : MonoBehaviour {
 	public void RespawnPlayer()
 	{
 		ReviveSound.Play();
-		if(SceneManager.GetActiveScene().buildIndex == 3)
+		if(SceneManager.GetActiveScene().buildIndex == 4)
 		{
-			SceneManager.LoadScene(3);
+			SceneManager.LoadScene(4);
 		}
 		else if(SceneManager.GetActiveScene().buildIndex == 6)
 		{
