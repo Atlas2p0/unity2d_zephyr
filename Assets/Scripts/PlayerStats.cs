@@ -14,8 +14,8 @@ public class PlayerStats : MonoBehaviour {
 	public Transform playerTransform;
 	[SerializeField] public GameObject levelManager;
 	
-	[SerializeField] private AudioSource DeathSoundEffect; 
- 
+	[SerializeField] private AudioSource DeathSoundEffect;
+
 	[Header("UI Components")]
 	private int currentHealth;
 	public int numOfHearts;
