@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: d8d25de4d4d7c4ce48e671ecb13b1924
+  - enabled: 1
+    path: Assets/Scenes/FinalBoss.unity
+    guid: 5b70f9115a422884d9a8ae878c312ca8
   m_configObjects: {}

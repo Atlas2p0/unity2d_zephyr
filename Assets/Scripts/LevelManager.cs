@@ -4,6 +4,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 	[SerializeField] public Animator anim;
@@ -24,15 +25,22 @@ public class LevelManager : MonoBehaviour {
 	public void RespawnPlayer()
 	{
 		ReviveSound.Play();
-		player.GetComponent<PlayerMovement>().enabled = true;
-		FindObjectOfType<PlayerMovement>().transform.position = CurrentCheckpoint.transform.position;
-		player.GetComponent<Animator>().enabled = true;
-		player.GetComponent<Animator>().SetBool("isDead", false);
-		player.GetComponent<PlayerStats>().enabled = true;
-		player.GetComponent<PlayerStats>().refillHP();
-		player.GetComponent<BoxCollider2D>().enabled = true;
-		player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-		player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+		if(SceneManager.GetActiveScene().buildIndex == 5)
+		{
+			SceneManager.LoadScene(5);
+		}
+		else
+		{
+			player.GetComponent<PlayerMovement>().enabled = true;
+			FindObjectOfType<PlayerMovement>().transform.position = CurrentCheckpoint.transform.position;
+			player.GetComponent<Animator>().enabled = true;
+			player.GetComponent<Animator>().SetBool("isDead", false);
+			player.GetComponent<PlayerStats>().enabled = true;
+			player.GetComponent<PlayerStats>().refillHP();
+			player.GetComponent<BoxCollider2D>().enabled = true;
+			player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+			player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+		}
 		
 	}
 }

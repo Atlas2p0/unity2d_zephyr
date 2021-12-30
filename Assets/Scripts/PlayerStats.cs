@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour {
 	public int maxHealth = 1;
 	public Animator anim;
@@ -24,6 +24,7 @@ public class PlayerStats : MonoBehaviour {
 	public Sprite emptyHeart;
 	public TextMeshProUGUI textScore;
 	public int coinsCollected;
+	Scene scene;
 
 	// Use this for initialization
 	void Start () {
@@ -90,7 +91,7 @@ public class PlayerStats : MonoBehaviour {
 		playerTransform.position = new Vector2(playerTransform.position.x, playerTransform.position.y - 0.5f);
 		anim.enabled = false;
 		//renable object
-		yield return new WaitForSeconds(1.2f);
+		yield return new WaitForSeconds(1.2f);	
 		FindObjectOfType<LevelManager>().RespawnPlayer();
 		
 	}

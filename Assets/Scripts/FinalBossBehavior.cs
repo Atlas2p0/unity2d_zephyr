@@ -36,7 +36,7 @@ public class FinalBossBehavior : MonoBehaviour {
 	private float canAttack1;
 	
 	private Random rand;
-	int randomAttack;
+	private int randomAttack;
 	
 
 	// Use this for initialization
@@ -109,7 +109,6 @@ public class FinalBossBehavior : MonoBehaviour {
 
 		if(attackSpeed <= canAttack1)
 		{
-			
 			randomAttack = Random.Range(1,20);
 			if(randomAttack % 2 == 0)
 			{

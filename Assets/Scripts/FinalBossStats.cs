@@ -9,13 +9,25 @@ public class FinalBossStats : MonoBehaviour {
 	public Animator anim;
 	public Transform finalBossTransform; //Used for bringing enemy to ground after death
 	// Use this for initialization
+	public GameObject Skeletons;
+	private bool canSpawn;
+	[SerializeField] private Transform playerTransform;
 	void Start () {
 		currentHealth = maxHealth;
 		Debug.Log(currentHealth);
 		anim = GetComponent<Animator>();
+		canSpawn = true;
 		
 	}
 	//This function plays take hit animation and if is dead plays dead and calls Die Coroutine
+	void Update()
+	{
+		if(currentHealth == 9 && canSpawn)
+		{
+			SpawnSkeletons();
+		}
+		
+	}
 	public void TakeDamage(int damage)
 	{
 		currentHealth -= damage;
@@ -49,5 +61,15 @@ public class FinalBossStats : MonoBehaviour {
 		//position trasformed by -0.5 on y axis so that enemy is directly on the ground after death
 		finalBossTransform.position = new Vector2(finalBossTransform.position.x, finalBossTransform.position.y - 0.5f);
 		anim.enabled = false;
+	}
+	private void SpawnSkeletons()
+	{
+		
+		//Spawn enemy monsters infront of player
+		Vector2 SpawnPosition = new Vector2(playerTransform.position.x + 6f, playerTransform.position.y);
+		Vector2 SpawnPosition2 = new Vector2(playerTransform.position.x + 5f, playerTransform.position.y);
+		Instantiate(Skeletons, SpawnPosition, Quaternion.identity);
+		Instantiate(Skeletons, SpawnPosition2, Quaternion.identity);
+		canSpawn = false;
 	}
 }

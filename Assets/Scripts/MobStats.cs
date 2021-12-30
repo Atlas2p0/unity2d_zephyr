@@ -45,6 +45,7 @@ public class MobStats : MonoBehaviour {
 		GetComponent<Skeleton_Behaviour>().enabled = false;
 		skeletonTransform = GetComponent<Transform>();
 		this.enabled = false;
+		FindObjectOfType<PlayerStats>().incrementHealth();
 		//Wait for animation to finish
 		yield return new WaitForSeconds(1.2f);
 
