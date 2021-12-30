@@ -12,6 +12,7 @@ public class PlayerCombat : MonoBehaviour {
 	public Animator anim;
 	public LayerMask enemyLayer; //To check if player slash hit enemy
 	public LayerMask patrollingEnemyLayer; //To check if player slash hit patrolling enemy
+	public LayerMask Lvl2Boss;
 	public LayerMask finalBossLayer; //To check if player slash hit patrolling enemy
 
 	[Header("Combat Vars")]
@@ -44,7 +45,7 @@ public class PlayerCombat : MonoBehaviour {
 
 		}
 	}
-	void Attack ()
+	void Attack()
 	{
 		//Play attack animation
 		anim.SetTrigger("Attack");
@@ -53,26 +54,34 @@ public class PlayerCombat : MonoBehaviour {
 		//Detect enemies in range of attack
 		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer); //use position of attack and attack range and detect if enemy has been hit
 
-		
+
 		// Damage enemies
-		foreach(Collider2D enemy in hitEnemies)
+		foreach (Collider2D enemy in hitEnemies)
 		{
 			enemy.GetComponent<MobStats>().TakeDamage(attackDamage); //call take damage function from mobstats
-			// enemy.GetComponent<patrollingEnemyStats>().TakeDamage(attackDamage); //call take damage function from mobstats	
-			
+																	 // enemy.GetComponent<patrollingEnemyStats>().TakeDamage(attackDamage); //call take damage function from mobstats	
+
 		}
 		Collider2D[] hitPatrollingEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, patrollingEnemyLayer);
-		foreach(Collider2D enem in hitPatrollingEnemies)
+		foreach (Collider2D enem in hitPatrollingEnemies)
 		{
 			Debug.Log("here");
 			patrollingEnemyStats patrollingEnemy = FindObjectOfType<patrollingEnemyStats>();
 			patrollingEnemy.enemyTakeDamage(attackDamage);
+
 		}
-		Collider2D hitFinalBoss = Physics2D.OverlapCircle(attackPoint.position, attackRange, finalBossLayer);
+
+		Collider2D[] hitBoss = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, Lvl2Boss);
+		foreach (Collider2D enem in hitBoss)
+		{
+			BODHealth boss = FindObjectOfType<BODHealth>();
+			boss.TakeDamage(50);
+	    }
+        Collider2D hitFinalBoss = Physics2D.OverlapCircle(attackPoint.position, attackRange, finalBossLayer);
 		if(hitFinalBoss != null)
 			FindObjectOfType<FinalBossStats>().TakeDamage(1);
 	}	
-	//Draw attack range for debugging
+		//Draw attack range for debugging
 	void OnDrawGizmosSelected()
 	{
 		if(attackPoint == null)
