@@ -14,7 +14,6 @@ public class FinalBossBehavior : MonoBehaviour {
 	
 	private Animator anim;
 	private bool facingRight; //used for flipping enemy
-	private SpriteRenderer spriteRenderer; //used for flipping enemy
 	public Rigidbody2D rb;
 
 	[Header("Combat Variables")]
@@ -46,7 +45,6 @@ public class FinalBossBehavior : MonoBehaviour {
 		playerTransform = playerObject.GetComponent<Transform>();
 		anim = GetComponent<Animator>();
 		facingRight = true;
-		spriteRenderer = GetComponent<SpriteRenderer>();
 		rb = GetComponent<Rigidbody2D>();
 		initTimer = timer;
 		canAttack1 = attackSpeed - 0.04f;
@@ -125,7 +123,8 @@ public class FinalBossBehavior : MonoBehaviour {
 			// Damage player
 			anim.SetBool("canWalk", false);//disable walking animation
 			Debug.Log("hit");
-			FindObjectOfType<PlayerStats>().TakeDamage(attackDamage);//call take damage
+			if(hitPlayer != null)
+				FindObjectOfType<PlayerStats>().TakeDamage(attackDamage);//call take damage
 			canAttack1 = 0f;//start cooldown
 		}
 		else
