@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BODHealth : MonoBehaviour {
 
-	public int health = 500;
+	public int health = 6;
 
 	public void TakeDamage(int damage)
 	{

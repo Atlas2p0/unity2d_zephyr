@@ -4,32 +4,41 @@ using UnityEngine;
 
 public class FinalBossStats : MonoBehaviour {
 
-	public int maxHealth = 1;
+	public int maxHealth = 15;
 	private int currentHealth;
 	public Animator anim;
 	public Transform finalBossTransform; //Used for bringing enemy to ground after death
 	// Use this for initialization
 	public GameObject Skeletons;
 	private bool canSpawn;
+	[SerializeField] private GameObject HealthBar;
+	private Transform bar;
 	[SerializeField] private Transform playerTransform;
+	private int index;
 	void Start () {
 		currentHealth = maxHealth;
 		Debug.Log(currentHealth);
 		anim = GetComponent<Animator>();
 		canSpawn = true;
+		index = maxHealth;
 		
 	}
 	//This function plays take hit animation and if is dead plays dead and calls Die Coroutine
 	void Update()
 	{
-		if(currentHealth == 9 && canSpawn)
+		if(currentHealth == 11 && canSpawn)
 		{
 			SpawnSkeletons();
 		}
 		
+		Debug.Log((float) currentHealth / maxHealth);
+		
 	}
 	public void TakeDamage(int damage)
 	{
+
+		HealthBar.GetComponent<FinalBossHealthBar>().setSize((float) currentHealth / maxHealth);
+
 		currentHealth -= damage;
 		Debug.Log(currentHealth);
 		
